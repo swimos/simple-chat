@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <name> -- <role> -- <twitter>
+
+# THANKS
+
+  # Great Librarys Want to thank their team
+  Bootstrap
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    SWIM, Modernizr

@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Swim Simple Chat Example</title>
+  <meta name="description" content="Simple chat application example using Swim services">
+  <link rel="icon" type="image/png" href="assets/favicon_x128.png">
+
+  <!-- Css style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Orbitron|Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/assets/css/fonts.css" type="text/css">
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+
+  <!-- javascript -->
+  <script src="assets/js/lib/swim-core.js"></script>
+  <script src="assets/js/lib/swim-ui.js"></script>
+  <script src="assets/js/lib/swim-ux.js"></script>
+  <script src="assets/js/lib/default.js"></script>
+  <script src="assets/js/chat.js"></script>
+
+  <script type="text/javascript">
+    let chat = null;
+    document.addEventListener('DOMContentLoaded', () => { 
+      chat = new ChatClass();
+      chat.start();
+    }, false);
+  </script>
+</head>
+
+<body onbeforeunload="chat.stop()">
+  <header class="main-header container-fluid">
+    <div class="row">
+      <div class="col col-8 content-left">
+        <picture><img src="assets/images/marlin-swim.svg" height="64px" alt="Swim Logo"></picture>
+        <div class="main-title">
+          <h1>Chat</h1>
+        </div>
+      </div>
+      <div class="col col-4 text-right content-right">
+        <span class="initial d-none d-md-block" id="userName">User Initial</span>
+        <i class="material-icons d-block d-md-none menu">menu</i>
+      </div>
+    </div>
+  </header><!-- /header -->
+
+  <main class="main">
+    <div class="bg-overlay"></div>
+
+    <aside class="main-nav">
+      <div class="container-fluid header">
+        <div class="row">
+          <div class="col col-8">
+            Room List
+          </div>
+          <div class="col col-4" onclick="chat.addRoom()">
+            <i class="material-icons">add</i>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="ul-no-style" id="roomsList">
+          <li class="active">
+            <span>Public</span>
+          </li>
+
+          <!-- test list with extra settings -->
+          <li class="active">
+            <span>test</span>
+            <div class="settings">
+              <i class="material-icons">edit</i>
+              <i class="material-icons">delete</i>
+            </div>
+          </li>
+
+
+        </ul>
+       
+      </nav>
+
+      <div class="container-fluid header">
+        <div class="row">
+          <div class="col col-8">
+            Users in room
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="ul-no-style" id="userList">
+
+        </ul>
+       
+      </nav>      
+
+    </aside>
+
+    <section class="chat-box container-fluid">
+      <div class="msg-wrap">
+        <ul class="ul-no-style msg-list" id="messageList">
+          <!-- prepend to list to show the latest message -->
+
+          <li>
+            <div class="icon"><span class="circle">sc</span></div><div class="content">
+            dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo
+            </div>
+          </li>
+
+          <li class="reverse">
+            <div class="icon"><span class="circle">ct</span></div><div class="content">
+            dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <from class="input-wrap msg">
+        <input type="text" name="message" placeholder="Message ..." id="messageInput">
+        <button id="sendButton"><i class="material-icons">send</i> </button>
+      </from>
+    </section>
+
+  </main><!-- /main -->
+
+</body>
+</html>
