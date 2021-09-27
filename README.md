@@ -11,9 +11,9 @@ In this example we are also using Swim as our http server and the UI is done usi
 
 You need java9+ to run the application and these instructions only cover running in a unix like environment. Gradle is not required as the project provides a gradle wrapper to use instead.
 
-1. `git clone https://github.com/swimod/swim-chat-site.git`
+1. `git clone https://github.com/swimos/simple-chat.git`
 
-2. `cd swim-chat-site/server`
+2. `cd swim-chat/server`
 
 3. `./gradlew run`
 
