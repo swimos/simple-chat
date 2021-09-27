@@ -13,7 +13,7 @@ You need java9+ to run the application and these instructions only cover running
 
 1. `git clone https://github.com/swimos/simple-chat.git`
 
-2. `cd swim-chat/server`
+2. `cd simple-chat/server`
 
 3. `./gradlew run`
 
